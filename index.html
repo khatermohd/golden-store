@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر الخليج الذهبي - أفضل المنتجات بأسعار مميزة</title>
+    <meta name="description" content="متجر الخليج الذهبي - تسوق أفضل المنتجات بأسعار مميزة مع خدمة توصيل سريعة">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- شريط الإعلانات العلوي -->
+    <div class="top-banner">
+        <div class="container">
+            <p><i class="fas fa-shipping-fast"></i> توصيل مجاني للطلبات فوق 50 دينار | <i class="fas fa-phone"></i> خدمة العملاء: 17123456</p>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <!-- اللوجو -->
+                <div class="logo">
+                    <h1><i class="fas fa-gem"></i> متجر الخليج الذهبي</h1>
+                    <span>تسوق بثقة وأمان</span>
+                </div>
+
+                <!-- شريط البحث -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="ابحث عن المنتجات...">
+                    <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- أيقونات الهيدر -->
+                <div class="header-icons">
+                    <div class="cart-icon" id="cartToggle">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                        <span>السلة</span>
+                    </div>
+                    <div class="admin-icon" id="adminToggle">
+                        <i class="fas fa-user-shield"></i>
+                        <span>الإدارة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- القائمة الرئيسية -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#products"><i class="fas fa-box"></i> المنتجات</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> من نحن</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> اتصل بنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- البانر الرئيسي -->
+    <section class="hero-banner">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>مرحباً بك في متجر الخليج الذهبي</h2>
+                <p>اكتشف مجموعة واسعة من المنتجات عالية الجودة بأسعار تنافسية</p>
+                <button class="cta-button" onclick="document.getElementById('products').scrollIntoView()">
+                    <i class="fas fa-shopping-bag"></i> تسوق الآن
+                </button>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-icon"><i class="fas fa-star"></i></div>
+            <div class="floating-icon"><i class="fas fa-gem"></i></div>
+            <div class="floating-icon"><i class="fas fa-crown"></i></div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3>توصيل سريع</h3>
+                    <p>توصيل مجاني للطلبات فوق 50 دينار</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>ضمان الجودة</h3>
+                    <p>منتجات أصلية مع ضمان الجودة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم 24/7</h3>
+                    <p>خدمة عملاء متاحة على مدار الساعة</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>إرجاع مجاني</h3>
+                    <p>إمكانية الإرجاع خلال 30 يوم</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> منتجاتنا المميزة</h2>
+                <p>اكتشف أحدث المنتجات وأفضل العروض</p>
+            </div>
+
+            <!-- فلاتر المنتجات -->
+            <div class="products-filters">
+                <button class="filter-btn active" data-filter="all">جميع المنتجات</button>
+                <button class="filter-btn" data-filter="electronics">إلكترونيات</button>
+                <button class="filter-btn" data-filter="fashion">أزياء</button>
+                <button class="filter-btn" data-filter="home">منزل</button>
+            </div>
+
+            <!-- شبكة المنتجات -->
+            <div class="products-grid" id="productsContainer">
+                <!-- سيتم تحميل المنتجات هنا ديناميكياً -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>جاري تحميل المنتجات...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سلة التسوق المنبثقة -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> سلة التسوق</h3>
+            <button class="close-cart" id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-content">
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <p>سلة التسوق فارغة</p>
+                </div>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>المجموع: <strong id="cartTotal">0 دينار</strong></span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">
+                    <i class="fas fa-credit-card"></i> إتمام الشراء
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة الإدارة المنبثقة -->
+    <div class="admin-modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-shield"></i> لوحة الإدارة</h3>
+                <button class="close-modal" id="closeAdmin"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body">
+                <!-- تسجيل دخول الإدارة -->
+                <div class="admin-login" id="adminLogin">
+                    <div class="login-form">
+                        <h4>تسجيل دخول المدير</h4>
+                        <div class="input-group">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="adminPassword" placeholder="كلمة المرور">
+                        </div>
+                        <button class="login-btn" id="loginBtn">
+                            <i class="fas fa-sign-in-alt"></i> دخول
+                        </button>
+                    </div>
+                </div>
+
+                <!-- لوحة إضافة المنتجات -->
+                <div class="admin-panel" id="adminPanel" style="display: none;">
+                    <h4><i class="fas fa-plus"></i> إضافة منتج جديد</h4>
+                    <form class="product-form" id="productForm">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label>اسم المنتج</label>
+                                <input type="text" id="productName" required>
+                            </div>
+                            <div class="input-group">
+                                <label>السعر (دينار)</label>
+                                <input type="number" id="productPrice" step="0.01" required>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label>وصف المنتج</label>
+                            <textarea id="productDescription" rows="3" required></textarea>
+                        </div>
+                        <div class="input-group">
+                            <label>فئة المنتج</label>
+                            <select id="productCategory" required>
+                                <option value="">اختر الفئة</option>
+                                <option value="electronics">إلكترونيات</option>
+                                <option value="fashion">أزياء</option>
+                                <option value="home">منزل</option>
+                                <option value="other">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label>صورة المنتج</label>
+                            <div class="file-upload">
+                                <input type="file" id="productImage" accept="image/*" required>
+                                <label for="productImage">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    اختر صورة
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-plus"></i> إضافة المنتج
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-gem"></i> متجر الخليج الذهبي</h4>
+                    <p>متجرك الموثوق للتسوق الإلكتروني في البحرين. نقدم أفضل المنتجات بأسعار تنافسية مع خدمة عملاء متميزة.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#products">المنتجات</a></li>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="#">سياسة الإرجاع</a></li>
+                        <li><a href="#">الشحن والتوصيل</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">الدعم الفني</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> المنامة، البحرين</p>
+                        <p><i class="fas fa-phone"></i> +973 17123456</p>
+                        <p><i class="fas fa-envelope"></i> info@goldengulf.bh</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر الخليج الذهبي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- الخلفية المظلمة للنوافذ المنبثقة -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- تحميل السكريبتات -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
